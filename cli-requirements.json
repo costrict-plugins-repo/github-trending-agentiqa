@@ -1,0 +1,20 @@
+{
+  "$comment": [
+    "SINGLE SOURCE OF TRUTH for the minimum `agentiqa` CLI version this plugin's skills",
+    "require. Read by hooks/session-start (the outdated-CLI notice) and by",
+    "scripts/check-skill-cli-freshness.mjs. Change it HERE and nowhere else.",
+    "",
+    "BUMP THIS when a skill starts documenting a verb or flag that an older CLI does not",
+    "have. Use the real published version once the release carrying those commands",
+    "lands on the npm `latest` dist-tag,",
+    "and refresh fixtures/cli-help.txt from that build in the same commit."
+  ],
+  "minCliVersion": "1.1.79",
+  "minCliVersionPlaceholder": false,
+  "minCliVersionReason": "Released 2026-10-01 as agentiqa@1.1.79 (npm latest). Requires role-aware `project permissions`, `project memory`, `project credentials`, and `project pool` administration, safe secret input/redaction and explicit removal confirmation, alongside the existing project lifecycle commands.",
+  "helpSnapshot": {
+    "path": "fixtures/cli-help.txt",
+    "source": "Published agentiqa@1.1.79 --help, gitHead 9c045b1592a5bc94fd0cfaea7c029548684c36f6 (Agentiqa/agentiqa release #3289).",
+    "refreshWith": "agentiqa --help > fixtures/cli-help.txt 2>&1"
+  }
+}
